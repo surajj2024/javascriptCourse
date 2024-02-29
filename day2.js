@@ -93,8 +93,82 @@ function multi(num1, num2){
 console.log(multi(2,2)); */
 
 // function expressions
-const square = function(num){
+/* const square = function(num){
     return num * num;
 }
 
-console.log(square(4));
+console.log(square(4)); */
+
+// HOF function(High order function)
+/* function callTwice(func) {
+    func();
+    func();
+}
+
+function rollDice() {
+    let random = Math.floor(Math.random() * 6) + 1;
+    console.log(random);
+}
+
+// callTwice(rollDice()); //error here
+callTenTimes(rollDice); */
+
+/* function makeHistory() {
+  const random = Math.random();
+  if (random > 0.5) {
+    return function () {
+      console.log("Here are larger numbers");
+      alert("Larger are on the way");
+    };
+  } else {
+    return function () {
+      console.log("Here are smaller numbers");
+      alert("smaller are on the way");
+    };
+  }
+} */
+
+//const make = makeHistory();
+//make();
+
+// Methods
+/* const myMath = {
+    PI: 3.14,
+    square: function(num){
+        return num ** 2;
+    },
+    cube: function(num){
+        return num ** 3;
+    },
+    // shorthand 
+    add(x, y){
+        return x * y;
+    },
+    sub(x, y, z){
+        return ((x - y) - z);
+    }
+} */
+
+// this keyword
+/* const name = {
+    name: "sandy",
+    age: 23,
+    DOB: "20/05/2000",
+    crave(){
+        console.log(`${this.name} is craving or food`);
+        console.log(this);
+    }
+}
+
+name.crave(); */
+
+/* const hen = {
+    name: "hen",
+    eggCount: 0,
+    layEggs(){
+        this.eggCount++;
+        console.log("EGG++");
+    }
+} */
+
+
