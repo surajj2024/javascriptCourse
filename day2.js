@@ -172,8 +172,80 @@ name.crave(); */
 } */
 
 // Arrow function
-const multiply = (a, b) => {
+/* const multiply = (a, b) => {
   return a * b;
 };
 
-console.log(multiply(2, 2));
+console.log(multiply(2, 2)); */
+
+//
+/* const greet = (name) => {
+    console.log(`Hello ${name}`);
+}
+ */
+
+// filter
+/* let movie = [{
+        name: "DIN",
+        year: 2000,
+        rating: 10,
+    },
+    {
+        name: "MIN",
+        year: 2023,
+        rating: 2,
+    },
+    {
+        name: "SIN",
+        year: 2022,
+        rating: 9,
+    },
+    {
+        name: "FIN",
+        year: 1999,
+        rating: 7,
+    },
+];
+
+const newMovie = movie.filter((movies) => {
+    return movies.year > 2000;
+});
+
+const highest = movie.filter((movies) => {
+    return movies.year > 2000;
+}).map((movie) => {
+    return movie.name;
+})
+
+console.log(highest); */
+
+//reduce
+const numbers = [12, 34, 46, 78, 89, 99, 78, 90, 9];
+/* 
+let total = 0;
+for (const num of numbers) {
+    total += num;
+}
+
+console.log(total); */
+
+/* const total = numbers.reduce((total, price) => {
+    return total + price;
+});
+
+/* const total = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+});
+
+console.log(total);
+ */
+
+const minPrice = numbers.reduce((min, price) => {
+    if(price < min){
+        return price;
+    }
+    return min;
+});
+
+console.log(minPrice);
+
