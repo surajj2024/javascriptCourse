@@ -239,7 +239,7 @@ console.log(total); */
 
 console.log(total);
  */
-
+/* 
 const minPrice = numbers.reduce((min, price) => {
     if(price < min){
         return price;
@@ -247,5 +247,155 @@ const minPrice = numbers.reduce((min, price) => {
     return min;
 });
 
-console.log(minPrice);
+console.log(minPrice); */
 
+// default params
+// function rollDice(numTimes) {
+//     //old way to defining default params
+//     /* if (numTimes === undefined) {
+//         numTimes = 6;
+//     } */
+//     return Math.floor(Math.random() * numTimes) + 1;
+// }
+/* 
+function rollDice(numTimes = 6) {
+    return Math.floor(Math.random() * numTimes) + 1;
+} */
+
+// spread
+/* Math.max(20, 22, 23, 3, 49); // 49
+
+const nums = [20, 22, 23, 3, 49];
+
+let ans = Math.max(nums);
+console.log(ans); //NaN
+
+let finalAns = Math.max(...nums);
+console.log(finalAns); //49
+console.log(...nums);  // 20 22 23 3 49 */
+
+/* let cats = ["meow", "chiie"];
+let dogs = ["woof", "HYYEEE", "WHOOOEESSS"];
+
+let animal = [...cats, ...dogs, "speedy", "slowly"];
+console.log(animal);
+ */
+/* 
+let twoLegs = {
+    chicken: true,
+    family: "Indian"
+};
+
+let fourLegs = {
+    goat: true,
+    family: "Australian"
+}
+
+// let both = {...twoLegs, ...fourLegs}
+let both = {...fourLegs, ...twoLegs, isAvailable: true, family: "janwar"}
+console.log(both);
+
+// let arrayToObj = {...["suraj"]}; //{ '0': 'suraj' }
+//let arrayToObj = {...[1, 2, 3, 4]}; //{ '0': 1, '1': 2, '2': 3, '3': 4 }
+let arrayToObj = {..."Hello"}; //{ '0': 'H', '1': 'e', '2': 'l', '3': 'l', '4': 'o' }
+console.log(arrayToObj);
+ */
+
+// REST
+/* function sum(){
+  console.log(arguments); //arguments is not actual array that is why reduce is not working
+  return arguments.reduce((total, el) => total + el); //arguments.reduce is not a function
+} */
+
+/* function sum(...nums) { //rest
+  //nums is real actual array
+  console.log(nums);
+  return nums.reduce((total, el) => total + el);
+}
+
+//sum(); //[Arguments] {}
+sum(2, 3, 4, 10, 29); //[Arguments] { '0': 2, '1': 3, '2': 4, '3': 10, '4': 29 }
+
+let ans = sum(2, 1);
+console.log(ans);
+
+function raceResult(gold, silver, ...everyoneElse){
+    console.log(`Our gold goes to ${gold}`);
+    console.log(`Our silver goes to ${silver}`);
+    console.log(`Thanks for there:  ${everyoneElse}`);
+}
+
+raceResult("suraj", "racer", "avi", "kabi", "kahs"); */
+
+// Destructuring array
+/* const scores = [1500, 1200, 1111, 1000, 200];
+
+const first = scores[0];
+const second = scores[1];
+
+console.log(first); //1500
+console.log(second); //1200
+
+const [gold, silver, bronze, ...everyoneElse] = scores;
+console.log(gold); //1500
+console.log(silver); //1200
+console.log(bronze); //1111
+console.log(everyoneElse); //[ 1000, 200 ] */
+
+//Destructuring objects
+const person = {
+    firstName: "ravi",
+    middleName: "Ranajan",
+    lastName: "dutta",
+    email: "ravi@gmail.com",
+    age: 34,
+    isAlive: true,
+    state: "Bihar",
+};
+
+// const firstName = person.firstName;
+// const lastName = person.lastName;
+/* 
+const {
+    middleName,
+    firstName,
+    email,
+    lastName,
+    ...otherInfo
+} = person;
+
+const {
+    state: city, //it has variable name as city now on,
+    country = "India",
+} = person;
+
+console.log(firstName); //ravi
+console.log(middleName); //ranjan
+console.log(lastName); //dutta
+console.log(email); //ravi@gmail.com
+console.log(otherInfo); //{ age: 34, isAlive: true, state: 'Bihar' }
+
+console.log(city); //Bihar
+console.log(country); //India
+ */
+
+
+// param destructuring
+/* function fullName(person){
+    return `${person.firstName} ${person.lastName}`;
+} */
+
+/* function fullName(person){
+    const {firstName, lastName, middleName} = person;
+    return `${firstName} ${middleName} ${lastName}`;
+} */
+
+function fullName({
+    firstName,
+    lastName,
+    middleName
+}) {
+    return `${firstName} ${middleName} ${lastName}`;
+}
+
+console.log(fullName(person)); //ravi ranjan dutta
