@@ -43,4 +43,3 @@ document.body.appendChild(newH3); */
     }); */
 
 
-    
