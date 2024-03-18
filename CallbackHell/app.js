@@ -25,6 +25,12 @@ const delayedColorChange = (newColor, delay, doNext) => {
     }, delay)
 }
 
+const change = () => {
+    setTimeout(() => {
+        console.log("here");
+    }, 3000)
+}
+
 // STILL A LOT OF NESTING!!!
 delayedColorChange('red', 1000, () => {
     delayedColorChange('orange', 1000, () => {
